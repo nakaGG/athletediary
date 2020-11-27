@@ -1,0 +1,36 @@
+<%= form_with(model: @diary, local: true) do |f|%>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">日付</label>
+    </div>
+    <div class='input-birth-wrap'>
+      <%= raw sprintf(
+                  f.date_select(
+                    :date,
+                    class:'select-birth',
+                    id:"birth-date",
+                    use_month_numbers: true,
+                    prompt:'--',
+                    start_year: 2020,
+                    end_year: (Time.now.year),
+                    date_separator: '%s'),
+                  "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+    </div>
+
+  <div class="new-items">
+      <div class="weight-bold-text">
+        練習メニュー
+      </div>
+      <%= f.text_area :menu, class:"items-text", id:"item-name", rows:"7" ,maxlength:"1000" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          反省
+        </div>
+        <%= f.text_area :reflection, class:"items-text", id:"item-info", rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
