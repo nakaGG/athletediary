@@ -38,9 +38,7 @@ a {
 
 .header {
   background-color: #271c18;
-  margin-bottom: 48px;
   padding: 20px 0;
-
 }
 .inner {
   width: 1024px;
@@ -118,6 +116,39 @@ a {
   cursor: pointer;
 }
 
+.new-items {
+  padding: 2vh 0;
+}
+
+.items-text {
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+}
+
+.items-explain {
+  margin-top: 2vh;
+}
+
+
+.items-detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 2vh 0;
+}
+
+.items-detail>.form {
+  width: 300px;
+  padding: 2vh 0;
+}
+
+.select-box {
+  margin: 2vh 0;
+}
+
 /* メイン */
 
 .greeting{
@@ -131,32 +162,31 @@ a {
   margin-bottom: 28px;
 }
 .card__wrapper {
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   min-height: calc(100vh - 161px);
+  background-color:white;
 }
 .card {
   width: calc((100% - 50px) / 3);
   margin-bottom: 40px;
+  border-bottom: 1px solid #949393;
 }
-.card__img {
-  margin-bottom: 16px;
-}
+
 .card__title {
   display: block;
-  font-size: 20px;
+  font-size: 15px;
   margin-bottom: 8px;
-  font-weight: bold;
 }
 .card__summary {
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: bold;
 }
 .card__user {
   display: block;
   font-size: 12px;
-  color: #999;
+  color: rgb(141, 140, 140);
   text-align: right;
   text-decoration: underline;
 }
@@ -177,11 +207,7 @@ a {
   text-align: center;
   text-decoration: underline;
 }
-.prototype__image{
-  width: 40%;
-  margin: 0 auto;
-  padding: 16px 0;
-}
+
 .prototype__detail{
   display: flex;
   align-items: center;
@@ -191,6 +217,11 @@ a {
 .detail__title{
   font-size: 20px;
   font-weight: bold;
+  margin-bottom: 10px;
+}
+.detail__message{
+  background-color: rgb(243, 242, 242);
+  margin-bottom: 20px;
 }
 .prototype__manage{
   display: flex;
@@ -208,6 +239,7 @@ a {
   border-radius: 3px;
   transition: 0.4s ease;
   margin: 0 4px;
+  margin-bottom: 30px;
 }
 .prototype__btn:hover{
   color: #fff;
@@ -320,4 +352,38 @@ a {
   .table{
     width: 100%;
   }
+}
+
+.input-birth-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-birth-wrap>select {
+  width: 75px;
+  margin-top: 5px;
+  height: 45px;
+  padding-left: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.input-birth-wrap>p {
+  line-height: 60px;
+  padding: 0 5px;
+}
+
+.form-group {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.main{
+  background-color: rgb(228, 228, 228);
 }
