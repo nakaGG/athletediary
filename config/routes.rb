@@ -4,6 +4,6 @@ Rails.application.routes.draw do
    registrations: 'users/registrations'
   }
   root to: "diaries#index"
-  resources :diaries, only: [:new, :create]
+  resources :diaries, only: [:new, :create, :show]
   resources :users, only: :new  
 end

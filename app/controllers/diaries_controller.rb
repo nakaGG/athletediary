@@ -1,5 +1,6 @@
 class DiariesController < ApplicationController
   def index
+    @diaries = Diary.all
   end
 
   def new
@@ -7,7 +8,6 @@ class DiariesController < ApplicationController
   end
 
   def create
-    binding.pry
     @diary = Diary.create(diary_params)
     if @diary.save
       redirect_to root_path
@@ -15,10 +15,13 @@ class DiariesController < ApplicationController
       render :index
     end
   end
+
+  def show
+  end
   
   private
 
   def diary_params
-    params.require(:diary).permit(:date, :menu, :reflection,).merge(user_id: current_user.id)
+    params.require(:diary).permit(:date, :title, :menu, :reflection,).merge(user_id: current_user.id)
   end
 end
