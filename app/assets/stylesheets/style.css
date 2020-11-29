@@ -258,6 +258,7 @@ a {
 .comments_list{
   list-style-type: square;
   padding-bottom: 5px;
+  list-style: none;
 }
 
 .comment_user{
@@ -307,7 +308,7 @@ a {
 .copyright {
   text-align: center;
   color: #fff;
-  font-size: 10px;
+  font-size: 15px;
 }
 
 /* タブレット対応 */
