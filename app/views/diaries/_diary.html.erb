@@ -2,8 +2,8 @@
   <div class="card__body">
     <%= link_to diary.date, diary_path(diary.id), class: :card__title%>
     <p class="card__summary">
-      <%= diary.title %>
+          <%= link_to diary.title, diary_path(diary.id), class: :card__title%>
     </p>
-    <%= link_to "by #{diary.user.name}", root_path, class: :card__user %>
+    <%= link_to "by #{diary.user.name}", user_path(diary.user), class: :card__user %>
   </div>
 </div>

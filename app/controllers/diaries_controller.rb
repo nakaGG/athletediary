@@ -1,6 +1,8 @@
 class DiariesController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+
   def index
-    @diaries = Diary.all
+    @diaries = Diary.includes(:user).order('created_at DESC')
   end
 
   def new
