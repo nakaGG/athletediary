@@ -5,7 +5,7 @@
         <%= @diary.title%>
       </p>
       <% if current_user == @diary.user %>
-        <%= link_to "by プロトタイプの投稿者", root_path, class: :prototype__user %>
+        <%= link_to current_user.name, user_path(@diary.user.id), class: :prototype__user %>
         <div class="prototype__manage">
           <%= link_to "編集する", edit_diary_path, class: :prototype__btn %>
           <%= link_to "削除する", diary_path, method: :delete, class: :prototype__btn %>
@@ -43,7 +43,7 @@
               <% @comments.each do |comment| %>
                 <p>
                   <%= comment.text %>
-                  <%= link_to comment.user.name, root_path, class: :comment_user %>
+                  <%= link_to comment.user.name, user_path(comment.user.id), class: :comment_user %>
                 </p>
               <% end %>
             </li>
