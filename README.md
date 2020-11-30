@@ -13,16 +13,18 @@
 
 ### Association
 
-- has_many :prototypes
+- has_many :diaries
 - has_many :comments
+- has_many :events
 
-## prototypes テーブル
+## diaries テーブル
 
 | Column     | Type       | Options           |
 | ------     | ---------- | ----------------- |
-| title      | string     | null: false       |
-| catch_copy | text       | null: false       |
-| concept    | text       | null: false       |
+| date       | date       | null: false       |
+| title      | text       | null: false       |
+| menu       | text       | null: false       |
+| reflection | text       | null: false       |
 | user       | references | foreign_key: true |
 
 ### Association
@@ -36,9 +38,21 @@
 | ------    | ---------- | ----------------- |
 | text      | text       | null: false       |
 | user      | references | foreign_key: true |
-| prototype | references | foreign_key: true |
+| diaries   | references | foreign_key: true |
 
 ### Association
 
 - belongs_to :users
-- belongs_to :prototypes
+- belongs_to :diaries
+
+## event テーブル
+
+| Column    | Type       | Options           |
+| ------    | ---------- | ----------------- |
+| title     | string     | null: false       |
+| content   | text       | null: false       |
+| start_time| datetime   | null: false       |
+| user      | references | foreign_key: true |
+
+### Association
+-belongs_to :user
