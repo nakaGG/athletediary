@@ -1,3 +1,29 @@
+# Athletediary
+ アスリートのための練習日記アプリです。<br >
+ 監督や同じチームの人と共有できます。 <br >
+ レスポンシブ対応しているのでスマホからもご確認いただけます。
+
+ # 目指した課題解決
+ 部活動の監督や部員の練習日記のデジタル化。 <br >
+
+# URL
+ https://athletediary.herokuapp.com/<br >
+
+# 使用技術
+- Ruby 2.5.7
+- Ruby on Rails 6.0.0
+- MySQL 12
+- RSpec
+
+# 機能一覧
+- ユーザー登録、ログイン機能(devise)
+- 投稿機能
+- コメント機能
+- カレンダー機能(simple_calendar)
+# テスト
+- RSpec
+  - 単体テスト(model)
+
 # テーブル設計
 
 ## users テーブル
