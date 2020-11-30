@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :sns_credentials
   has_many :diaries
   has_many :comments
+  has_many :events
 
   def self.from_omniauth(auth)
     sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create
