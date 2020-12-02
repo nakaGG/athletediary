@@ -8,6 +8,7 @@
 
 # URL
  https://athletediary.herokuapp.com/<br >
+ 画面右上のゲストログインからメールアドレスとパスワードを入力せずにログインできます<br >
 
 # 使用技術
 - Ruby 2.5.7
