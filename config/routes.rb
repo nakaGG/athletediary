@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   end
   resources :users, only: [:new, :show]
   resources :events
+  devise_scope :user do
+    post 'users/guest_sign_in', to: 'users/sessions#new_guest'
+  end
 end
