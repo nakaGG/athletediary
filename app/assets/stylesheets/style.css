@@ -56,10 +56,10 @@ a {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #778002;
+  color: #f3f3ed;
   text-decoration: none;
   user-select: none;
-  border: 1px #778002 solid;
+  border: 1px #f1f1ed solid;
   border-radius: 3px;
   transition: 0.4s ease;
 }
@@ -78,6 +78,17 @@ a {
 }
 .nav__logout:hover{
   opacity: 0.5;
+}
+
+.guest-login-box {
+  height: 30vw;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-image: url("/images/guest_login_box_background.png");
+  background-position: center;
+  background-size: cover;
 }
 
 /* フォーム周り */

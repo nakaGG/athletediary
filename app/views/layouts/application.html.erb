@@ -23,16 +23,17 @@
               <%= link_to "New Diary", new_diary_path, class: :nav__btn %>
               <%= link_to "カレンダー", events_path, class: :nav__btn %>
             </div>
-          <% else %>
-            <div class="nav__right">
-              <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
-              <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
-              <%= link_to "ゲストログイン", users_guest_sign_in_path, method: :post, class: :nav__btn%>
-            </div>
           <% end %>
         </div>
       </div>
     </header>
+    <% unless user_signed_in? %>
+    <div class='guest-login-box'>
+      <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
+      <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
+      <%= link_to "ゲストログイン", users_guest_sign_in_path, method: :post, class: :nav__btn%>
+    </div>
+    <% end %>
     <%= yield %>
     <footer class="footer">
       <p class="copyright">Copyright © Athlete Diary All rights reserved.</p>
