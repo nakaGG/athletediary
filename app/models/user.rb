@@ -5,10 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2]
   
          validates :name, presence: true
+         validates :image, presence: true
   has_many :sns_credentials
   has_many :diaries
   has_many :comments
   has_many :events
+  has_one_attached :image
 
   def self.from_omniauth(auth)
     sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create

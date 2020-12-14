@@ -37,6 +37,7 @@
 | profile    | text   | null: false |
 | occupation | text   | null: false |
 | position   | text   | null: false |
+| image      |        |             |
 
 ### Association
 
