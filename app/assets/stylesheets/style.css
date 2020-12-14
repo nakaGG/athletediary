@@ -56,10 +56,10 @@ a {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #778002;
+  color: #f3f3ed;
   text-decoration: none;
   user-select: none;
-  border: 1px #778002 solid;
+  border: 1px #f1f1ed solid;
   border-radius: 3px;
   transition: 0.4s ease;
 }
@@ -78,6 +78,17 @@ a {
 }
 .nav__logout:hover{
   opacity: 0.5;
+}
+
+.guest-login-box {
+  height: 30vw;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-image: url("/images/guest_login_box_background.png");
+  background-position: center;
+  background-size: cover;
 }
 
 /* フォーム周り */
@@ -169,24 +180,40 @@ a {
   background-color:white;
 }
 .card {
-  
   margin-bottom: 20px;
   border-bottom: 1px solid #b3b2b2;
 }
 
-.card__title {
-  display: block;
+.card__body{
+  box-sizing: border-box;
 }
-.card__summary {
+
+.card__image{
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border: 1px solid #fff;
+  border-radius: 70px;
+  margin-left: 5px;
+}
+
+.card__title {
   font-size: 20px;
   font-weight: bold;
+  margin-left: 30px;
 }
+
+.card__date{
+  font-size: 13px;
+  color: rgb(141, 140, 140);
+}
+
 .card__user {
   display: block;
   font-size: 12px;
   color: rgb(141, 140, 140);
-  text-align: right;
   text-decoration: underline;
+  margin-left: 5px;
 }
 
 /* 詳細ページ */
@@ -391,4 +418,21 @@ a {
 .pickup{
   margin-left: 45%;
   margin-bottom: 20px;
+}
+
+.user-image{
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border: 1px solid #fff;
+  border-radius: 70px;
+  margin-top: 10px;
+}
+
+.user-top{
+  object-fit: cover;
+  border-radius: 70px;
+  width: 250px;
+  height: 250px;
+  padding: 5px;
 }

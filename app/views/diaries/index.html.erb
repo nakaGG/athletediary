@@ -3,6 +3,7 @@
     <% if user_signed_in? %>
       <div class="greeting">
         こんにちは、
+        <%= image_tag current_user.image, class: 'user-image'  if current_user.image.attached?%>
          <%= link_to "#{current_user.name}さん", user_path(current_user), class: :greeting__link%>
       </div> 
     <% end %>

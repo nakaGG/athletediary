@@ -47,6 +47,11 @@
           <%= f.text_area :seasongoal, class: :form__text %>
         </div>
 
+        <div class="field">
+          <%= f.label :image, "ユーザー画像" %><br />
+          <%= f.file_field :image %>
+        </div>
+
         <div class="actions">
           <%= f.submit "新規登録", class: :form__btn  %>
           <%= link_to 'Googleで登録', user_google_oauth2_omniauth_authorize_path, method: :post, class: :form__btn %>

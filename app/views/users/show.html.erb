@@ -1,6 +1,9 @@
 <div class="main">
   <div class="inner">
     <div class="user__wrapper">
+      <h2 class="user-top">
+        <%= image_tag @user.image, class: 'user-top' %>
+      </h2>
       <h2 class="page-heading">
         <%= "#{@user.name}"%>
       </h2>
