@@ -7,7 +7,7 @@
  部活動の監督や部員の練習日記のデジタル化。 <br >
 
 # URL
- https://athletediary.herokuapp.com/<br >
+ ec2-3-113-124-233.ap-northeast-1.compute.amazonaws.com<br >
  画面右上のゲストログインからメールアドレスとパスワードを入力せずにログインできます<br >
 
 # 使用技術
